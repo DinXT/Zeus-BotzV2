@@ -591,9 +591,9 @@ module.exports = {
               let wm = global.botwm
               let wel = await (await fetch(fla + `WELCOME`)).buffer()
 
-              let lea = await (await fetch(fla + `GOOD BYE`)).buffer()
+              let lea = await (await fetch(fla + `GOODBYE`)).buffer()
 
-              conn.send2ButtonLoc(jid, action === 'add' ? wel : lea, text, action === 'add' ? '*WELCOME TO GROUP ✨*' : '*YEY NASI KOTAK 😈*', '⋮☰ Menu', '#menu', 'Info Grup', '.infogc', false, {
+              conn.send2ButtonLoc(jid, action === 'add' ? wel : lea, text, action === 'add' ? '*WELCOME TO GROUP ✨*' : '*Nasi kotak enjoyers bilek 😅*', '⋮☰ Menu', '#menu', 'Info Grup', '.infogc', false, {
                 contextInfo: {
                   mentionedJid: [user]
                 }
@@ -622,8 +622,8 @@ module.exports = {
     await this.reply(m.key.remoteJid, `
 Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
 
-Untuk mematikan fitur ini, ketik
-*.disable delete*
+Makanya liat² dlu klo ngetik awoakwowkok
+*- DinXT*
 `.trim(), m.message, {
       contextInfo: {
         mentionedJid: [m.participant]
@@ -653,15 +653,15 @@ global.dfail = (type, m, conn) => {
 	let name = conn.getName(m.sender)
   let msg = {
     rowner: `❌ ACCESS DENIED`,
-    owner: `❌ ACCESS DENIED Khusus Owner Tod`,
+    owner: `❌ ACCESS DENIED Khusus Untuk *DinXT | Owner*`,
     mods: `❌ ACCESS DENIED Khusus Moderator`,
     premium: '❌ ACCESS DENIED Khusus Premium',
     group: 'Perintah ini hanya dapat digunakan di grup!',
     private: '❌Perintah ditolak❌\n\nGunakan Perintah ini di Chat Pribadi bot',
     admin: 'Perintah ini hanya untuk *Admin* grup!',
     nsfw: `Perintah ini hanya bisa diaktifkan oleh @${global.kontak[0].split`@`[0]}`,
-    botAdmin: 'Mikir Bg Bot Nya Bukan Atmin :(',
-    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar nama.16*`
+    botAdmin: 'Aku bukan admin kak 😌',
+    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar DinXT.16*`
   }[type]
   if (msg) return m.reply(msg)
 }
